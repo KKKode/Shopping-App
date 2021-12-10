@@ -1,8 +1,6 @@
 import React, { useState,useEffect } from "react";
 import "./style.css";
 import Menu from "./Api";
-// import ShopCard from "./ShopCard";
-// import Navbar from "./Navbar.js";
 
 
 const uniqueList = [
@@ -33,15 +31,6 @@ const ShopSite = () => {
     setFake(jsonData);
   }
 
-//   const uniqueList = [
-//     ...new Set(
-//       fake.map((curElem) => {
-//         return curElem.category;
-//       })
-//     ),
-//     "All",
-//   ];
-
   const filterItem = (category) => {
     if (category === "All") {
       setFake(Menu);
@@ -55,7 +44,7 @@ const ShopSite = () => {
     setFake(updatedList);
   };
 
-// recent code
+//  for indivisual button list
 
 // const filterItem = (category) => {
 //     const updatedList = Menu.filter((curElem) =>{
@@ -84,10 +73,9 @@ const ShopSite = () => {
           <button className= "btn-group__item" onClick={()=>filterItem("jewelery")}>jewelery</button>
           <button className= "btn-group__item" onClick={()=>filterItem("electronics")}>electronics</button> */}
           {/* <button className= "btn-group__item" onClick={()=>filterItem("jewelery")}>All</button> */}
+
         </div>
       </nav>
-
-      {/* <ShopCard fake={fake}/> */}
 
       <section className="main-card--cointainer">
 
